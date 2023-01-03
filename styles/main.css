@@ -1,0 +1,83 @@
+main {
+    flex: 1;
+    z-index: 999;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .main__content {
+    z-index: 1;
+    width: 100%;
+    margin: auto auto;
+    max-width: 1440px;
+    padding: 24px 24px 228px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px 0; 
+
+  }
+  
+  .main__content .logo {
+    width: 250px;
+    height: auto;
+  }
+
+  .main__content span {
+   font-size: 1.5rem; 
+   line-height: 1.75rem;
+
+   font-weight: 500;
+   letter-spacing: 0.04em;
+   text-transform: uppercase;
+
+  }
+  
+    .main__content .controll {
+      display: flex;
+      align-items: center;
+      column-gap: 15px;
+     
+      /* padding: 0 10px; */
+      width: 100%;
+      max-width: 300px;
+      
+    }
+
+  .controll button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var( --tertiary)
+    
+  }
+  
+  .controll button:disabled {
+    background: var(--primary);
+  }
+
+  .controll button svg {
+    width: 29px;
+    height: auto;
+    
+  }
+
+  .controll button  svg path {
+    stroke: black;
+  }
+
+  
+  .controll  span{
+    font-weight: 400;
+
+    font-size: 1.5rem; 
+    line-height: 1.75rem;
+  }
