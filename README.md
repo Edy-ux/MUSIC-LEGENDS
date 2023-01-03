@@ -20,3 +20,25 @@
 <p align="center">
   <img src=".github/preview.png" width="100%" />
 </p>
+
+
+
+## 💻 Projeto
+
+O protótipo desse website foi desenvolvido pelo [**Iuri Silva**](https://www.instagram.com/iuricode/), [clique aqui](https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO?node-id=80254%3A868) para abrir o protótipo no figma.
+
+## 🚀 Tecnologias
+
+-  HTML
+-  CSS
+-  JavaScript
+-  SVG Inject
+
+## 📔 Conhecimentos abordados
+
+- [x]  Uso semântico do HTML;
+- [x]  Uso de variáveis globais no `:root`;
+- [x]  Importação de `font` local;
+- [x]  Evento para navegar entre as músicas;
+- [x]  Evento de timer na música;
+- [x]  Navegação pelo teclado(pausar música, avançar e voltar música);
