@@ -3,18 +3,17 @@
 @import url('./header.css');
 @import url('./footer.css');
 
-
 @font-face {
-  font-family: "GT Eesti Pro Display";
-  src: url("./fonts/GT-Eesti-Display-Medium.otf");
+  font-family: 'GT Eesti Pro Display';
+  src: url('./fonts/GT-Eesti-Display-Medium.otf');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "GT Eesti Pro Display";
-  src: url("./fonts/GT-Eesti-Display-Medium.otf");
+  font-family: 'GT Eesti Pro Display';
+  src: url('./fonts/GT-Eesti-Display-Medium.otf');
   font-style: normal;
   font-weight: bold;
   font-display: swap;
@@ -39,18 +38,25 @@
 }
 
 :root {
-  --primary: #C0C0C0;
-  --secondary: #2EF4CC; 
-  --tertiary: #F1F0F0; 
+  --primary: #c0c0c0;
+  --secondary: #2ef4cc;
+  --tertiary: #f1f0f0;
 
-  --background: #14061F;
-  --background-light: #200C30;
+  --background: #14061f;
+  --background-light: #200c30;
 }
 
-/*  */body, button, textarea, input {
-/*  */  color: var(--primary);
-/*  */  font: 400 1rem "GT Eesti Pro Display", sans-serif;
-/*  */}
+/*  */
+body,
+button,
+textarea,
+input {
+  /*  */
+  color: var(--primary);
+  /*  */
+  font: 400 1rem 'GT Eesti Pro Display', sans-serif;
+  /*  */
+}
 /*  */
 a {
   color: inherit;
@@ -64,5 +70,3 @@ button {
 button:hover {
   cursor: pointer;
 }
-
-
