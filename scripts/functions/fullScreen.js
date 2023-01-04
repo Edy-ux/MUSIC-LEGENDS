@@ -4,9 +4,8 @@ const element = document.querySelector(".app");
 // const fullScreen = elem.requestFullscreen
 
 const openFullScreen = () => {
-    var full_screen_element = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement || null;
-    //If Is Full Screen Currently
-    if (full_screen_element === null) {
+    // If no element is in full-screen
+    if (IsFullScreenCurrently()) {
         GoInFullscreen()
     } else {
         GoOutFullscreen()
@@ -15,13 +14,9 @@ const openFullScreen = () => {
 
 function GoInFullscreen() {
     if (element.requestFullscreen)
-        element.requestFullscreen();
-    else if (element.mozRequestFullScreen)
-        element.mozRequestFullScreen();
-    else if (element.webkitRequestFullscreen)
-        element.webkitRequestFullscreen();
-    else if (element.msRequestFullscreen)
-        element.msRequestFullscreen();
+        // element.requestFullscreen(); or
+        element.requestFullscreen({ navigationUI: "show" })
+   
 }
 
 //exit fullScren
@@ -39,10 +34,9 @@ function GoOutFullscreen() {
 function IsFullScreenCurrently() {
     var full_screen_element = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement || null;
 
-    // If no element is in full-screen
     if (full_screen_element === null)
-        return false;
-    else
         return true;
+    else
+        return false;
 }
 

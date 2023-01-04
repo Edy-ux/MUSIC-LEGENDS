@@ -1,96 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Music Legends</title>
-  <meta name="description" content="Radio Music Legends" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Legends</title>
+    <meta name="description" content="Radio Music Legends" />
 
-  <script src="./scripts/svg-inject.min.js"></script>
-  <script src="./scripts/app.js" defer></script>
-  <script src="./scripts/functions/fullScreen.js" defer></script>
+    <script src="./scripts/svg-inject.min.js"></script>
+    <script src="./scripts/app.js" defer></script>
+    <script src="./scripts/functions/fullScreen.js" defer></script>
 
-  <link rel="stylesheet" href="./styles/global.css" />
-</head>
+    <link rel="stylesheet" href="./styles/global.css" />
+  </head>
 
-<body>
-  <div class="app">
-    <header>
-      <div class="header__content">
+  <body>
+    <div class="app">
+      <header>
+        <div class="header__content">
+          <button type="button" id="button__toggle" onclick="handleToggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
-        <nav>
-          <ul id="navigation">
-            <li>
-              <a href="#">Início</a>
-            </li>
-            <li>
-              <a href="#">Buscar</a>
-            </li>
-            <li class="active">
-              <a href="#">Suas bibliotecas</a>
-            </li>
-          </ul>
-        </nav>
 
-        <h1>music legends</h1>
+          <nav>
+            <ul id="navigation">
+              <li>
+                <a href="#">Início</a>
+              </li>
+              <li>
+                <a href="#">Buscar</a>
+              </li>
+              <li class="active">
+                <a href="#">Suas bibliotecas</a>
+              </li>
+            </ul>
+          </nav>
 
-        <div class="user">
-          <span>Ednei Lopes</span>
-          <div class="user__avatar">
-            <img src="https://github.com/edy-ux.png" alt="Avatar do usuário">
+          <h1>music legends</h1>
+
+          <div class="user">
+            <span>Ednei Lopes</span>
+            <div class="user__avatar">
+              <img src="https://github.com/edy-ux.png" alt="Avatar do usuário">
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <main style="background-image: url('./assets/background.png');">
-      <!-- linear-gradient(rgba(0,0,0,0.66), rgba(0,0,0,0.66)), -->
-      <div class="main__content">
-        <img class="logo" src="./assets/logo.png" alt="Logo da liga das
-                  lendas">
-        <span>riot games</span>
+      <main style="background-image: linear-gradient(rgba(0,0,0,0.66),
+        rgba(0,0,0,0.66)), url('./assets/background.png');">
+        <!-- linear-gradient(rgba(0,0,0,0.66), rgba(0,0,0,0.66)), -->
+        <div class="main__content">
+          <img class="logo" src="./assets/logo.png" alt="Logo da liga das
+            lendas">
+          <span>riot games</span>
 
-        <div class="controll">
-          <button disabled type="button" onclick="changeMusic(-1)">
-            <img src="./assets/icons/chevron-left.svg" alt="Ìcone seta para
+          <div class="control">
+            <button disabled type="button" onclick="changeMusic(-1)">
+              <img src="./assets/icons/chevron-left.svg" alt="Ìcone seta para
                 esquerda" onload="SVGInject(this)">
-          </button>
-          <span>1/20</span>
-          <button type="button" onclick="changeMusic(1)">
-            <img src="./assets/icons/chevron-right.svg" alt="Ìcone seta para
-                direita" onload="SVGInject(this)">
-          </button>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div class="footer__content">
-        <div class="collection">
-          <img src="./assets/icons/heart.svg" alt="icon heart" onload="SVGInject(this)">
-          <h2>Warriors</h2>
-          <span>Riot games ft</span>
-        </div>
-        <div class="music">
-          <img src="./assets/icons/repeat.svg" alt="repeat icon" onload="SVGInject(this)">
-
-          <div class="control__player">
-            <img src="./assets/icons/chevron-left.svg" alt="left" onload="SVGInject(this)">
-            <button type="button">
-              <img src="./assets/icons/play.svg " alt="collection" onload="SVGInject(this)">
             </button>
-            <img src="./assets/icons/chevron-right.svg" alt="right" onload="SVGInject(this)">
+            <span>1/20</span>
+            <button type="button" onclick="changeMusic(1)">
+              <img src="./assets/icons/chevron-right.svg" alt="Ìcone seta para
+                direita" onload="SVGInject(this)">
+            </button>
           </div>
-          <img src="./assets/icons/repeat.svg" alt="repeat icon" onload="SVGInject(this)">
+          <div class="music_mobile">
+           <div class="heart_album" style="display: flex; column-gap:10px ; align-items:center;"> 
+            <h2>Warriors</h2>
+            <img src="./assets/icons/heart.svg" alt="icon heart"
+              onload="SVGInject(this)">
+            </div>
+            <span>Riot games ft. Imagine Dragons </span>
+         </div>
         </div>
-        <div class="volume_and_minimize">
-          <img src="./assets/icons/volume.svg" alt="volume" onload="SVGInject(this)">
-          <img src="./assets/icons/minimize..svg"  onclick="openFullScreen();" alt="minimizar" onload="SVGInject(this)">
-        </div>
-      </div>
+      </main>
+      <footer>
+        <span class="timeline"></span>
+        <div class="footer__content">
+          <div class="album_song">
+            <img src="./assets/icons/heart.svg" alt="icon heart"
+              onload="SVGInject(this)">
+            <h2>Warriors</h2>
+            <span>Riot games ft. Imagine Dragons </span>
+         </div>
+          <div class="player">
+            <img src="./assets/icons/repeat.svg" alt="repeat icon"
+              onload="SVGInject(this)">
 
-    </footer>
-</body>
-</div>
+            <div class="player__main">
+              <img src="./assets/icons/chevron-left.svg" alt="left"
+                onload="SVGInject(this)">
+              <button type="button">
+                <img src="./assets/icons/play.svg " alt="collection"
+                  onload="SVGInject(this)">
+              </button>
+              <img src="./assets/icons/chevron-right.svg" alt="right"
+                onload="SVGInject(this)">
+            </div>
+            <img src="./assets/icons/rotate-cw.svg" alt="repeat icon"
+              onload="SVGInject(this)">
+          </div>
+          <div class="controller">
+            <img src="./assets/icons/volume.svg" alt="volume"
+              onload="SVGInject(this)">
+            <img src="./assets/icons/minimize..svg" onclick="openFullScreen();"
+              alt="minimizar" onload="SVGInject(this)">
+          </div>
+        </div>
+      </footer>
+    </body>
+  </div>
 
 </html>

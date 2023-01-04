@@ -1,83 +1,157 @@
 main {
-    flex: 1;
-    z-index: 999;
-    display: flex;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  flex: 1;
+
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main__content {
+  position: relative;
+
+ 
+  width: 100%;
+  max-width: 1440px;
+  margin: auto auto 0;
+  padding: 24px 24px 228px;
+  display: flex;
+  gap: 29px;
+  flex-direction: column;
+}
+
+.main__content .logo {
+  width: 250px;
+  height: auto;
+}
+
+.main__content span {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.main__content .control {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
+  /* padding: 0 10px; */
+  width: 100%;
+  max-width: 300px;
+}
+
+.control button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--tertiary);
+}
+ 
+.control button:disabled {
+  background: var(--primary);
+}
+
+
+.control button svg {
+  margin: auto;
+  width: 22px;
+  height: auto;
+}
+.control button svg path  {
+  stroke: var(--background) !important;
+  border: 1.45856px solid #14061F;
+}
+
+.control span {
+  font-weight: 400;
+
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+
+.music_mobile {
   
+  position: absolute;
+  bottom: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+ 
+  /* align-items: center; */
+}
+
+.music_mobile svg {
+  width: 20px;
+  height: 18px;
+}
+
+.music_mobile h2 {
+  font-size: 2rem;
+  line-height: 2.313rem;
+
+  font-weight: 400;
+}
+
+.music_mobile span {
+  max-width: 300px;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  
+}
+
+
+@media screen and (max-width: 1080px) {
   .main__content {
-    z-index: 1;
-    width: 100%;
-    margin: auto auto;
-    max-width: 1440px;
-    padding: 24px 24px 228px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 24px 0; 
-
+    padding: 24px 24px 150px;
+    
   }
-  
+}
+
+
+@media screen and (max-width: 768px) {
+  .music_mobile {
+    visibility: visible;
+   display: flex;
+
+   
+  }
+
   .main__content .logo {
-    width: 250px;
+    width: 140px;
     height: auto;
   }
-
-  .main__content span {
-   font-size: 1.5rem; 
-   line-height: 1.75rem;
-
-   font-weight: 500;
-   letter-spacing: 0.04em;
-   text-transform: uppercase;
+  .main__content span{
+    font-size: 1.125rem;
+    line-height: 1.305rem;
+  }
+  .control button  {
+    border: 1.45856px solid #14061F;
+    width: 32px;
+    width: 32px;
+    border-radios: 50%;
 
   }
-  
-    .main__content .controll {
-      display: flex;
-      align-items: center;
-      column-gap: 15px;
-     
-      /* padding: 0 10px; */
-      width: 100%;
-      max-width: 300px;
-      
-    }
-
-  .controll button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: var( --tertiary)
-    
-  }
-  
-  .controll button:disabled {
-    background: var(--primary);
-  }
-
-  .controll button svg {
+  .control button svg {
     width: 29px;
     height: auto;
     
   }
-
-  .controll button  svg path {
-    stroke: black;
-  }
-
   
-  .controll  span{
-    font-weight: 400;
 
-    font-size: 1.5rem; 
-    line-height: 1.75rem;
-  }
+
+ 
+}
