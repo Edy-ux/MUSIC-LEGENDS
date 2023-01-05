@@ -1,16 +1,16 @@
 main {
   flex: 1;
+  display: flex;  
 
-  display: flex;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 .main__content {
   position: relative;
-
- 
+  
   width: 100%;
   max-width: 1440px;
   margin: auto auto 0;
@@ -34,7 +34,7 @@ main {
   text-transform: uppercase;
 }
 
-.main__content .control {
+.main__content .controll {
   display: flex;
   align-items: center;
   column-gap: 20px;
@@ -44,7 +44,7 @@ main {
   max-width: 300px;
 }
 
-.control button {
+.controll button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -56,22 +56,22 @@ main {
   background: var(--tertiary);
 }
  
-.control button:disabled {
+.controll button:disabled {
   background: var(--primary);
 }
 
 
-.control button svg {
+.controll button svg {
   margin: auto;
   width: 22px;
   height: auto;
 }
-.control button svg path  {
+.controll button svg path  {
   stroke: var(--background) !important;
   border: 1.45856px solid #14061F;
 }
 
-.control span {
+.controll span {
   font-weight: 400;
 
   font-size: 1.5rem;
@@ -79,7 +79,7 @@ main {
 }
 
 
-.music_mobile {
+.music__mobile {
   
   position: absolute;
   bottom: 20px;
@@ -91,19 +91,19 @@ main {
   /* align-items: center; */
 }
 
-.music_mobile svg {
+.music__mobile svg {
   width: 20px;
   height: 18px;
 }
 
-.music_mobile h2 {
+.music__mobile h2 {
   font-size: 2rem;
   line-height: 2.313rem;
 
   font-weight: 400;
 }
 
-.music_mobile span {
+.music__mobile span {
   max-width: 300px;
   width: 100%;
   font-size: 1rem;
@@ -114,44 +114,82 @@ main {
 }
 
 
-@media screen and (max-width: 1080px) {
+@media(max-width: 1080px) {
   .main__content {
     padding: 24px 24px 150px;
-    
   }
 }
 
+@media(max-width: 768px) {
 
-@media screen and (max-width: 768px) {
-  .music_mobile {
-    visibility: visible;
-   display: flex;
-
-   
+  
+  .main__content {
+    padding: 0 24px 72px;
   }
 
+  .main__content .controll {
+    margin-bottom: 150px;
+  }
+
+  .music__mobile {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    visibility: visible;
+  }
+
+  .music__mobile div {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+  }
+
+  .music__mobile h2 {
+    font-size: 2rem;
+    color: var(--tertiary);
+    line-height: 2.375rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .music__mobile h2 svg {
+    width: 20px;
+    height: auto;
+  }
+
+  .music__mobile h3 {
+    font-size: 1rem;
+    line-height: 1.125rem;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+}
+/* Mobile 650 */
+@media(max-width: 650px) {
   .main__content .logo {
     width: 140px;
-    height: auto;
   }
-  .main__content span{
+
+
+  .main__content strong {
     font-size: 1.125rem;
-    line-height: 1.305rem;
-  }
-  .control button  {
-    border: 1.45856px solid #14061F;
-    width: 32px;
-    width: 32px;
-    border-radios: 50%;
-
-  }
-  .control button svg {
-    width: 29px;
-    height: auto;
-    
-  }
+    line-height: 1.25rem;
   
+    margin: 16px 0 24px;
+  }
 
+  .main__content .controll {
+    column-gap: 30px;
+    margin-bottom: 190px;
+  }
 
- 
+  .controll button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .controll button svg {
+    width: 17px;
+  }
+
 }
