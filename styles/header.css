@@ -142,7 +142,12 @@ header nav, header .user {
   }
 
   #navigation {
-    column-gap: 32px;
+    column-gap: 30px;
+  }
+
+  .header__content h1 {
+    font-size: 1.5rem;
+    line-height: 1.0rem;
   }
 }
 
