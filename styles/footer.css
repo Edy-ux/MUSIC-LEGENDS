@@ -71,6 +71,7 @@ footer {
 }
 
 .player button {
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,8 +84,17 @@ footer {
   background-color: var(--background-light);
 }
 
+.player  .pause{
+  position: absolute;
+  left: 68px;
+  /* visibility: hidden; */
+  display: none;
+}
+
 
 .player .player__main {
+  position: relative;
+  
     display: flex;
     align-items: center;
     column-gap: 36px;
@@ -101,27 +111,24 @@ footer {
   cursor: pointer;
 }
 
-
-
 footer .timeline {
   position: absolute;
   top: -2px;
   left: 0;
   height: 4px;
-  width: 40%;
+  width: 0%;
   display: flex;
   justify-content: flex-end;
- background: linear-gradient(90.35deg, #4AC08F 2.49%, #2FB4FF 101.2%, #2FB4FF 101.2%); */
+  background: linear-gradient(90.35deg, #4AC08F 2.49%, #2FB4FF 101.2%, #2FB4FF 101.2%); */
   /* background: var(--secondary); */
 }
 
 .timeline::before {
   display: block;
-  /* position: absolute; */
   content: '';
   height: 20px;
   width: 20px;
-  /* padding-right:px; */
+  
   border-radius: 50%;
   background: linear-gradient(
     90.35deg,
@@ -130,20 +137,12 @@ footer .timeline {
     #2fb4ff 101.2%
   );
   transform: translateY(-8px);
-  filter: blur(0.2em)
+  filter: blur(0.08em)
 
 }
 
 
 
-
-@media screen and (max-width: 1080px){
-
-  .main__content {
-    padding: 24px 24px 150px
-  }
-
-}
 
 @media screen and (max-width: 1080px){
 
@@ -152,16 +151,15 @@ footer .timeline {
   }
 
 }
-
 @media screen and (max-width: 768px){
 
   .album_song, .controller{
     display: none;
     visibility: hidden;
   }
+  
   .player {
-   width: 100%;
-   /* justify-content: space-; */
+    width: 100%;
   }
 
   .player .player__main {

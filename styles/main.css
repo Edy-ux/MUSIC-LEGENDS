@@ -1,20 +1,19 @@
 main {
   flex: 1;
-  display: flex;  
+  display: flex;
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .main__content {
-  position: relative;
-  
   width: 100%;
+
   max-width: 1440px;
   margin: auto auto 0;
   padding: 24px 24px 228px;
+
   display: flex;
   gap: 29px;
   flex-direction: column;
@@ -37,9 +36,8 @@ main {
 .main__content .controll {
   display: flex;
   align-items: center;
-  column-gap: 20px;
+  column-gap: 18px;
 
-  /* padding: 0 10px; */
   width: 100%;
   max-width: 300px;
 }
@@ -55,20 +53,19 @@ main {
 
   background: var(--tertiary);
 }
- 
+
 .controll button:disabled {
   background: var(--primary);
 }
-
 
 .controll button svg {
   margin: auto;
   width: 22px;
   height: auto;
 }
-.controll button svg path  {
+.controll button svg path {
   stroke: var(--background) !important;
-  border: 1.45856px solid #14061F;
+  border: 1.45856px solid #14061f;
 }
 
 .controll span {
@@ -78,17 +75,11 @@ main {
   line-height: 1.75rem;
 }
 
-
 .music__mobile {
-  
-  position: absolute;
-  bottom: 20px;
   display: none;
   flex-direction: column;
   justify-content: flex-end;
   gap: 10px;
- 
-  /* align-items: center; */
 }
 
 .music__mobile svg {
@@ -110,38 +101,38 @@ main {
   line-height: 1.25rem;
   text-transform: uppercase;
   font-weight: 400;
-  
 }
 
+@media (max-width: 1080px) {
 
-@media(max-width: 1080px) {
   .main__content {
-    padding: 24px 24px 150px;
+    padding: 24px 24px 150px !important;
   }
 }
 
-@media(max-width: 768px) {
-
-  
+@media (max-width: 768px) {
   .main__content {
-    padding: 0 24px 72px;
+    padding: 24px 24px 72px !important;
   }
-
+  .main__content .logo {
+   
+    margin-top: 100px;
+  }
   .main__content .controll {
     margin-bottom: 150px;
   }
 
   .music__mobile {
     display: flex;
+    visibility: visible;
     flex-direction: column;
     row-gap: 16px;
-    visibility: visible;
   }
 
   .music__mobile div {
     display: flex;
     align-items: center;
-    column-gap: 24px;
+    column-gap: 16px;
   }
 
   .music__mobile h2 {
@@ -163,24 +154,31 @@ main {
     text-transform: uppercase;
     opacity: 0.6;
   }
-}
-/* Mobile 650 */
-@media(max-width: 650px) {
-  .main__content .logo {
-    width: 140px;
-  }
 
-
-  .main__content strong {
+  .main__content .control span {
     font-size: 1.125rem;
     line-height: 1.25rem;
-  
+
     margin: 16px 0 24px;
+  }
+}
+/* Mobile 650 */
+@media (max-width: 650px) {
+  .main__content .logo {
+    width: 166px;
+    margin-top: 100px;
+  }
+
+  .main__content span {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+
+    margin: 10px 0 10px;
   }
 
   .main__content .controll {
     column-gap: 30px;
-    margin-bottom: 190px;
+    margin-bottom: 200px;
   }
 
   .controll button {
@@ -191,5 +189,4 @@ main {
   .controll button svg {
     width: 17px;
   }
-
 }

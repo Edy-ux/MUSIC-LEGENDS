@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <div class="app" >
+    <div class="app">
       <header>
         <div class="header__content">
           <button
@@ -56,13 +56,13 @@
       </header>
 
       <main
-      style="
-      background-image: linear-gradient(
-          rgba(0, 0, 0, 0.66),
-          rgba(0, 0, 0, 0.66)
-        ),
-        url('./assets/background.png');
-    "
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.66),
+              rgba(0, 0, 0, 0.66)
+            ),
+            url('./assets/background.png');
+        "
       >
         <!-- linear-gradient(rgba(0,0,0,0.66), rgba(0,0,0,0.66)), -->
         <div class="main__content">
@@ -134,9 +134,23 @@
                 alt="left"
                 onload="SVGInject(this)"
               />
-              <button type="button">
+              <button type="button"
+              onclick="playMusic()"
+              class="play"
+               
+              >
                 <img
                   src="./assets/icons/play.svg "
+                  alt="collection"
+                  onload="SVGInject(this)"
+                />
+              </button>
+              <button type="button"
+              onclick="playMusic()"
+               class="pause active"
+              >
+                <img
+                  src="./assets/icons/pause.svg"
                   alt="collection"
                   onload="SVGInject(this)"
                 />
@@ -170,8 +184,14 @@
       </footer>
     </div>
     <script src="./scripts/app.js"></script>
+    <script>
+      const menuMobile = document.querySelector('#navigation');
+      const buttonToggle = document.querySelector('#button__toggle');
+
+      const toogleMenuMobile = () => {
+        menuMobile.classList.toggle('active');
+        buttonToggle.classList.toggle('active');
+      };
+    </script>
   </body>
-
- 
-
 </html>

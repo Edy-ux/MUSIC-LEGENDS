@@ -15,7 +15,7 @@
   
   <a href="https://github.com/leovargasdev/music-legends/issues">
     <img alt="Repository issues" src="https://img.shields.io/github/issues/edy-ux/MUSIC-LEGENDS.svg" />
-  </a>
+  </a> 
 </p>
 <p align="center">
   <img src=".github/preview.png" width="100%" />
